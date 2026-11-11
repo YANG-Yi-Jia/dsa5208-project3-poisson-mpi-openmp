@@ -1,0 +1,43 @@
+#!/bin/bash
+#PBS -N poisson_strong96
+#PBS -q parallel
+#PBS -l select=1:ncpus=96:mpiprocs=96:mem=8gb
+#PBS -l walltime=00:20:00
+#PBS -j oe
+
+set -e
+cd "$PBS_O_WORKDIR"
+
+module purge
+module load openmpi/4.1.2
+module load gcc/9.2.0
+
+export OMP_NUM_THREADS=1
+export OMP_DYNAMIC=FALSE
+
+mkdir -p results/strong_scaling
+
+OUT="results/strong_scaling/strong96_${PBS_JOBID%%.*}.csv"
+
+echo "===== STRONG SCALING 24-96 ====="
+hostname
+date
+
+echo "===== CPU TOPOLOGY ====="
+lscpu | grep -E 'CPU\(s\):|Thread\(s\) per core:|Core\(s\) per socket:|Socket\(s\):'
+
+for p in 24 48 96
+do
+    for repeat in 1 2 3
+    do
+        echo "MPI ranks=$p repeat=$repeat"
+
+        mpirun --bind-to core -np "$p" ./poisson_mpi \
+            --dim 2 --n 2048 \
+            --mode benchmark --iterations 1000 \
+            --output "$OUT"
+    done
+done
+
+echo "===== FINISHED ====="
+date

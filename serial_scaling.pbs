@@ -1,0 +1,39 @@
+#!/bin/bash
+#PBS -N poisson_serialscale
+#PBS -q parallel
+#PBS -l select=1:ncpus=12:mpiprocs=1:mem=4gb
+#PBS -l walltime=00:20:00
+#PBS -j oe
+
+set -e
+cd "$PBS_O_WORKDIR"
+
+module purge
+module load openmpi/4.1.2
+module load gcc/9.2.0
+
+mkdir -p results/serial_scaling
+
+OUT="results/serial_scaling/serial_${PBS_JOBID%%.*}.csv"
+
+echo "===== SERIAL GRID SCALING ====="
+hostname
+date
+
+for n in 256 512 1024 2048
+do
+    for repeat in 1 2 3
+    do
+        echo "N=$n repeat=$repeat"
+
+        ./poisson_serial \
+            --dim 2 \
+            --n "$n" \
+            --mode benchmark \
+            --iterations 1000 \
+            --output "$OUT"
+    done
+done
+
+echo "===== FINISHED ====="
+date

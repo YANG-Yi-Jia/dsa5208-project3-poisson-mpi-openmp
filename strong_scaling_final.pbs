@@ -1,0 +1,45 @@
+#!/bin/bash
+#PBS -N poisson_final
+#PBS -q parallel
+#PBS -l select=1:ncpus=96:mpiprocs=96:mem=8gb
+#PBS -l walltime=00:30:00
+#PBS -j oe
+
+set -e
+cd "$PBS_O_WORKDIR"
+
+module purge
+module load openmpi/4.1.2
+module load gcc/9.2.0
+
+export OMP_NUM_THREADS=1
+export OMP_DYNAMIC=FALSE
+
+mkdir -p results/strong_scaling
+OUT="results/strong_scaling/final_${PBS_JOBID%%.*}.csv"
+
+echo "===== FINAL STRONG SCALING ====="
+hostname
+date
+
+echo "===== CPU INFORMATION ====="
+lscpu | grep -E 'Model name|CPU\(s\):|Thread\(s\) per core:|Socket\(s\):|NUMA node'
+
+echo "===== PBS ALLOCATION ====="
+cat "$PBS_NODEFILE" | sort | uniq -c
+
+for p in 1 2 4 6 12 24 48 96
+do
+    for repeat in 1 2 3
+    do
+        echo "MPI=$p repeat=$repeat"
+
+        mpirun --bind-to core -np "$p" ./poisson_mpi \
+            --dim 2 --n 2048 \
+            --mode benchmark --iterations 1000 \
+            --output "$OUT"
+    done
+done
+
+echo "===== FINISHED ====="
+date

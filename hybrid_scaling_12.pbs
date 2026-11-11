@@ -1,0 +1,46 @@
+#!/bin/bash
+#PBS -N poisson_hybrid12
+#PBS -q parallel
+#PBS -l select=1:ncpus=12:mpiprocs=12:mem=4gb
+#PBS -l walltime=00:20:00
+#PBS -j oe
+
+set -e
+cd "$PBS_O_WORKDIR"
+
+module purge
+module load openmpi/4.1.2
+module load gcc/9.2.0
+
+export OMP_DYNAMIC=FALSE
+export OMP_PROC_BIND=close
+export OMP_PLACES=cores
+
+mkdir -p results/hybrid_scaling
+OUT="results/hybrid_scaling/hybrid_${PBS_JOBID%%.*}.csv"
+
+echo "===== HYBRID SCALING ====="
+hostname
+date
+
+for config in "1 12" "2 6" "3 4" "4 3" "6 2" "12 1"
+do
+    set -- $config
+    p=$1
+    t=$2
+    export OMP_NUM_THREADS=$t
+
+    for repeat in 1 2 3
+    do
+        echo "MPI=$p OpenMP=$t repeat=$repeat"
+
+        mpirun --map-by "slot:PE=$t" --bind-to core \
+            -np "$p" ./poisson_hybrid \
+            --dim 2 --n 2048 \
+            --mode benchmark --iterations 1000 \
+            --output "$OUT"
+    done
+done
+
+echo "===== FINISHED ====="
+date

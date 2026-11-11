@@ -1,0 +1,48 @@
+#!/bin/bash
+#PBS -N poisson_strong
+#PBS -q parallel
+#PBS -l select=1:ncpus=12:mpiprocs=12:mem=4gb
+#PBS -l walltime=00:20:00
+#PBS -j oe
+
+set -e
+cd "$PBS_O_WORKDIR"
+
+module purge
+module load openmpi/4.1.2
+module load gcc/9.2.0
+
+export OMP_NUM_THREADS=1
+export OMP_DYNAMIC=FALSE
+
+mkdir -p results/strong_scaling
+OUT="results/strong_scaling/strong_${PBS_JOBID%%.*}.csv"
+
+echo "===== STRONG SCALING ====="
+hostname
+date
+
+echo "===== SERIAL BASELINE ====="
+for repeat in 1 2 3
+do
+    echo "Serial repeat=$repeat"
+    ./poisson_serial --dim 2 --n 2048 \
+        --mode benchmark --iterations 1000 \
+        --output "$OUT"
+done
+
+echo "===== PURE MPI ====="
+for p in 1 2 4 6 12
+do
+    for repeat in 1 2 3
+    do
+        echo "MPI ranks=$p repeat=$repeat"
+        mpirun --bind-to core -np "$p" ./poisson_mpi \
+            --dim 2 --n 2048 \
+            --mode benchmark --iterations 1000 \
+            --output "$OUT"
+    done
+done
+
+echo "===== FINISHED ====="
+date

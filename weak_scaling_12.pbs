@@ -1,0 +1,43 @@
+#!/bin/bash
+#PBS -N poisson_weak
+#PBS -q parallel
+#PBS -l select=1:ncpus=12:mpiprocs=12:mem=4gb
+#PBS -l walltime=00:20:00
+#PBS -j oe
+
+set -e
+cd "$PBS_O_WORKDIR"
+
+module purge
+module load openmpi/4.1.2
+module load gcc/9.2.0
+
+export OMP_NUM_THREADS=1
+export OMP_DYNAMIC=FALSE
+
+mkdir -p results/weak_scaling
+OUT="results/weak_scaling/weak_${PBS_JOBID%%.*}.csv"
+
+echo "===== WEAK SCALING ====="
+hostname
+date
+
+for config in "1 768" "2 1086" "4 1536" "6 1881" "12 2660"
+do
+    set -- $config
+    p=$1
+    n=$2
+
+    for repeat in 1 2 3
+    do
+        echo "MPI=$p N=$n repeat=$repeat"
+
+        mpirun --bind-to core -np "$p" ./poisson_mpi \
+            --dim 2 --n "$n" \
+            --mode benchmark --iterations 1000 \
+            --output "$OUT"
+    done
+done
+
+echo "===== FINISHED ====="
+date

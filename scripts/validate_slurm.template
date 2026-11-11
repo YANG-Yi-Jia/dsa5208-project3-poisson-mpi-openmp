@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#SBATCH --job-name=poisson-check
+#SBATCH --nodes=1
+#SBATCH --ntasks=4
+#SBATCH --cpus-per-task=1
+#SBATCH --time=00:15:00
+#SBATCH --output=poisson-check-%j.log
+#SBATCH --error=poisson-check-%j.err
+set -euo pipefail
+# TEMPLATE ONLY. Add the actual --partition / --account / memory directives
+# required by your site. Load the site's matching compiler/MPI modules below.
+# module load <actual-compiler-module> <actual-mpi-module>
+cd "${SLURM_SUBMIT_DIR:?Submit from the DSA5208_Project3 directory}"
+# Select the launcher recommended by your site's MPI documentation.
+# Default assumes mpirun is supported inside this Slurm allocation.
+export MPIEXEC=mpirun
+export MPI_NP_FLAG=-np
+# If the site requires srun, replace the two lines above with:
+# export MPIEXEC='srun --exclusive'
+# export MPI_NP_FLAG=-n
+# A site-specific --mpi=... may also be required; do not guess its value.
+bash scripts/run_hpc_validation.sh
