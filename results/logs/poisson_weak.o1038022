@@ -1,0 +1,261 @@
+Loading openmpi/4.1.2
+  Loading requirement: gcc/7.3.0
+===== WEAK SCALING =====
+cnode-33-43-28
+Mon Nov  9 18:05:38 +08 2026
+MPI=1 N=768 repeat=1
+[cnode-33-43-28:76657] mca_base_component_repository_open: unable to open mca_ess_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76657] mca_base_component_repository_open: unable to open mca_plm_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76657] mca_base_component_repository_open: unable to open mca_ras_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76663] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76663] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+mpi,2,768,1,1,1,1000,benchmark,0.75441961999999996,0.75413606500000074,0.00011638400000017678,0,0.9916898764973554,0.49649056389228452,0.9916857272077183,0,NA
+MPI=1 N=768 repeat=2
+[cnode-33-43-28:76667] mca_base_component_repository_open: unable to open mca_ess_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76667] mca_base_component_repository_open: unable to open mca_plm_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76667] mca_base_component_repository_open: unable to open mca_ras_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76671] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76671] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+mpi,2,768,1,1,1,1000,benchmark,0.758810447,0.75853141299999927,0.00010200099999991491,0,0.9916898764973554,0.49649056389228452,0.9916857272077183,0,NA
+MPI=1 N=768 repeat=3
+[cnode-33-43-28:76676] mca_base_component_repository_open: unable to open mca_ess_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76676] mca_base_component_repository_open: unable to open mca_plm_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76676] mca_base_component_repository_open: unable to open mca_ras_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76680] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76680] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+mpi,2,768,1,1,1,1000,benchmark,0.75853982200000003,0.75825773300000032,0.00011335299999921597,0,0.9916898764973554,0.49649056389228452,0.9916857272077183,0,NA
+MPI=2 N=1086 repeat=1
+[cnode-33-43-28:76684] mca_base_component_repository_open: unable to open mca_ess_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76684] mca_base_component_repository_open: unable to open mca_plm_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76684] mca_base_component_repository_open: unable to open mca_ras_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76690] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76689] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76690] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76689] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+mpi,2,1086,2,1,2,1000,benchmark,0.82976434399999999,0.8176130349999996,0.01209948700000046,0,0.99583222112641279,0.49837459540096857,0.99583013868885495,0,NA
+MPI=2 N=1086 repeat=2
+[cnode-33-43-28:76696] mca_base_component_repository_open: unable to open mca_ess_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76696] mca_base_component_repository_open: unable to open mca_plm_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76696] mca_base_component_repository_open: unable to open mca_ras_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76700] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76701] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76700] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76701] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+mpi,2,1086,2,1,2,1000,benchmark,0.84905741700000004,0.83542897200000077,0.014011646999999527,0,0.99583222112641279,0.49837459540096857,0.99583013868885495,0,NA
+MPI=2 N=1086 repeat=3
+[cnode-33-43-28:76707] mca_base_component_repository_open: unable to open mca_ess_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76707] mca_base_component_repository_open: unable to open mca_plm_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76707] mca_base_component_repository_open: unable to open mca_ras_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76712] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76713] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76713] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76712] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+mpi,2,1086,2,1,2,1000,benchmark,0.82687690199999997,0.81520747399999882,0.012640045000000717,0,0.99583222112641279,0.49837459540096857,0.99583013868885495,0,NA
+MPI=4 N=1536 repeat=1
+[cnode-33-43-28:76719] mca_base_component_repository_open: unable to open mca_ess_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76719] mca_base_component_repository_open: unable to open mca_plm_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76719] mca_base_component_repository_open: unable to open mca_ras_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76723] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76726] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76725] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76724] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76723] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76725] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76726] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76724] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+mpi,2,1536,4,1,4,1000,benchmark,1.5171238040000001,1.4810521299999999,0.052138847000004242,0,0.99791325783118889,0.49928147010738821,0.99791221482406833,0,NA
+MPI=4 N=1536 repeat=2
+[cnode-33-43-28:76737] mca_base_component_repository_open: unable to open mca_ess_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76737] mca_base_component_repository_open: unable to open mca_plm_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76737] mca_base_component_repository_open: unable to open mca_ras_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76741] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76742] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76744] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76743] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76742] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76741] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76743] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76744] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+mpi,2,1536,4,1,4,1000,benchmark,1.445289791,1.4184760860000005,0.080604250999999419,0,0.99791325783118889,0.49928147010738821,0.99791221482406833,0,NA
+MPI=4 N=1536 repeat=3
+[cnode-33-43-28:76754] mca_base_component_repository_open: unable to open mca_ess_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76754] mca_base_component_repository_open: unable to open mca_plm_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76754] mca_base_component_repository_open: unable to open mca_ras_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76759] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76761] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76760] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76762] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76759] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76761] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76760] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76762] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+mpi,2,1536,4,1,4,1000,benchmark,1.487081632,1.4603350839999987,0.050962076000001431,0,0.99791325783118889,0.49928147010738821,0.99791221482406833,0,NA
+MPI=6 N=1881 repeat=1
+[cnode-33-43-28:76772] mca_base_component_repository_open: unable to open mca_ess_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76772] mca_base_component_repository_open: unable to open mca_plm_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76772] mca_base_component_repository_open: unable to open mca_ras_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76778] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76777] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76779] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76780] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76782] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76781] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76778] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76777] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76779] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76780] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76782] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76781] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+mpi,2,1881,6,1,6,1000,benchmark,1.609165835,1.5670742510000002,0.69721747499999931,0,0.99860771479935417,0.49956930320147036,0.99860771447605279,0,NA
+MPI=6 N=1881 repeat=2
+[cnode-33-43-28:76796] mca_base_component_repository_open: unable to open mca_ess_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76796] mca_base_component_repository_open: unable to open mca_plm_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76796] mca_base_component_repository_open: unable to open mca_ras_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76800] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76801] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76803] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76804] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76806] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76805] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76801] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76800] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76803] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76804] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76806] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76805] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+mpi,2,1881,6,1,6,1000,benchmark,1.555582515,1.5183378849999991,0.64533439199999743,0,0.99860771479935417,0.49956930320147036,0.99860771447605279,0,NA
+MPI=6 N=1881 repeat=3
+[cnode-33-43-28:76820] mca_base_component_repository_open: unable to open mca_ess_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76820] mca_base_component_repository_open: unable to open mca_plm_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76820] mca_base_component_repository_open: unable to open mca_ras_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76827] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76825] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76826] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76828] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76829] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76830] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76827] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76826] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76825] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76828] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76829] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76830] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+mpi,2,1881,6,1,6,1000,benchmark,1.5239612550000001,1.4904568839999999,0.637384166999997,0,0.99860771479935417,0.49956930320147036,0.99860771447605279,0,NA
+MPI=12 N=2660 repeat=1
+[cnode-33-43-28:76844] mca_base_component_repository_open: unable to open mca_ess_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76844] mca_base_component_repository_open: unable to open mca_plm_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76844] mca_base_component_repository_open: unable to open mca_ras_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76851] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76850] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76849] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76852] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76853] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76854] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76855] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76856] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76858] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76857] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76859] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76860] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76851] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76850] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76849] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76852] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76853] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76854] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76855] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76856] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76858] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76859] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76857] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76860] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+mpi,2,2660,12,1,12,1000,benchmark,5.004797119,4.9041689250000138,3.6416174579999998,0,0.99930332732480176,0.49983950259322724,0.99930297902903154,0,NA
+MPI=12 N=2660 repeat=2
+[cnode-33-43-28:76891] mca_base_component_repository_open: unable to open mca_ess_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76891] mca_base_component_repository_open: unable to open mca_plm_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76891] mca_base_component_repository_open: unable to open mca_ras_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76897] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76896] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76895] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76898] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76899] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76900] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76901] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76902] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76903] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76904] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76896] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76897] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76895] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76898] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76905] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76906] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76899] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76900] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76901] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76902] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76903] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76904] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76905] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76906] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+mpi,2,2660,12,1,12,1000,benchmark,5.079461813,4.9745966900000012,3.6436414900000114,0,0.99930332732480176,0.49983950259322724,0.99930297902903154,0,NA
+MPI=12 N=2660 repeat=3
+[cnode-33-43-28:76936] mca_base_component_repository_open: unable to open mca_ess_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76936] mca_base_component_repository_open: unable to open mca_plm_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76936] mca_base_component_repository_open: unable to open mca_ras_lsf: libbat.so: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76941] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76942] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76940] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76943] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76944] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76945] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76946] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76948] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76947] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76950] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76949] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76942] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76941] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76940] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76951] mca_base_component_repository_open: unable to open mca_btl_openib: libosmcomp.so.3: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76943] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76944] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76945] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76946] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76948] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76947] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76949] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76950] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+[cnode-33-43-28:76951] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+mpi,2,2660,12,1,12,1000,benchmark,4.9954215120000001,4.8908388190000123,3.6192153710000055,0,0.99930332732480176,0.49983950259322724,0.99930297902903154,0,NA
+===== FINISHED =====
+Mon Nov  9 18:06:22 +08 2026
+      ======================================================================================
+     Resource Usage on 2026-11-09 18:06:24.592476:
+     JobId: 1038022.venus01  				 Project: _pbs_project_default 
+     Submission Host: atlas8-c01 
+     Exit Status: 0
+     NCPUs Requested: 12 				 NCPUs Used: 12
+     Memory Requested: 4gb 				 Memory Used: 0b 
+     Vmem Used: 2629308kb
+     CPU Time Used: 00:00:00 
+     Walltime requested: 00:20:00 			 Walltime Used: 00:00:45
+     Submit Time:  Mon Nov  9 18:05:34 2026 		 Start Time: Mon Nov  9 18:05:37 2026 
+     End Time: Mon Nov  9 18:06:24 2026 
+     Execution Nodes Used: (cnode-33-43-28:ncpus=12:mem=4194304kb)
+     ======================================================================================

@@ -1,0 +1,48 @@
+Loading openmpi/4.1.2
+  Loading requirement: gcc/7.3.0
+Python 3.7.0
+===== JOB INFORMATION =====
+Job ID: 1037997.venus01
+cnode-33-43-21
+Mon Nov  9 17:29:34 +08 2026
+Currently Loaded Modulefiles:
+ 1) gcc/7.3.0   2) openmpi/4.1.2   3) gcc/9.2.0   4) python3.7  
+===== SERIAL AND MPI VALIDATION =====
+Output directory: results/hpc_20261109T092935Z_73033
+rm -f poisson_serial poisson_mpi poisson_hybrid test_mpi_stencil
+mpicxx -Iinclude -O3 -std=c++17 -Wall -Wextra -Wpedantic src/serial.cpp -o poisson_serial
+mpicxx -Iinclude -O3 -std=c++17 -Wall -Wextra -Wpedantic -DOMPI_SKIP_MPICXX src/mpi.cpp -o poisson_mpi
+mpicxx -Iinclude -O3 -std=c++17 -Wall -Wextra -Wpedantic tests/test_stencil.cpp -o /tmp/poisson_test_stencil
+/tmp/poisson_test_stencil
+python3 tests/test_serial.py
+2D max-error refinement orders: [2.008366741813501, 2.0020872575265556]
+3D max-error refinement orders: [2.008366741813476, 2.002087257526157]
+PASS: 14 numerical/stopping cases, 7 invalid arguments, CSV append; local_validation.csv
+mpicxx -Iinclude -O3 -std=c++17 -Wall -Wextra -Wpedantic -DOMPI_SKIP_MPICXX tests/test_mpi_stencil.cpp -o test_mpi_stencil
+python3 tests/test_mpi.py
+asymmetric field max difference: 0
+asymmetric field max difference: 0
+asymmetric field max difference: 0
+asymmetric field max difference: 0
+PASS: 30 full-field comparisons, 2 convergence cases, 2 iteration-limit cases; scope=multiple processes including ranks>N rejection
+PASS: HPC validation complete. Return this directory: results/hpc_20261109T092935Z_73033
+===== HYBRID COMPILATION =====
+mpicxx -Iinclude -O3 -std=c++17 -Wall -Wextra -Wpedantic -fopenmp -DOMPI_SKIP_MPICXX src/hybrid.cpp -o poisson_hybrid
+===== HYBRID VALIDATION =====
+PASS: 48 hybrid full-field comparisons across ranks/threads
+===== ALL TESTS FINISHED =====
+Mon Nov  9 17:32:50 +08 2026
+      ======================================================================================
+     Resource Usage on 2026-11-09 17:32:50.939633:
+     JobId: 1037997.venus01  				 Project: _pbs_project_default 
+     Submission Host: atlas8-c01 
+     Exit Status: 0
+     NCPUs Requested: 12 				 NCPUs Used: 12
+     Memory Requested: 2gb 				 Memory Used: 94636kb 
+     Vmem Used: 2487684kb
+     CPU Time Used: 00:00:08 
+     Walltime requested: 00:20:00 			 Walltime Used: 00:03:19
+     Submit Time:  Mon Nov  9 17:29:28 2026 		 Start Time: Mon Nov  9 17:29:31 2026 
+     End Time: Mon Nov  9 17:32:50 2026 
+     Execution Nodes Used: (cnode-33-43-21:ncpus=12:mem=2097152kb)
+     ======================================================================================

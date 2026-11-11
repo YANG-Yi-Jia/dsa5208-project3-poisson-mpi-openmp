@@ -1,0 +1,57 @@
+Loading openmpi/4.1.2
+  Loading requirement: gcc/7.3.0
+===== SERIAL GRID SCALING =====
+cnode-33-43-28
+Mon Nov  9 21:32:05 +08 2026
+N=256 repeat=1
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+serial,2,256,1,1,1,1000,benchmark,0.136462945,0.136462945,0,0,0.92800689019228577,0.465815508556575,0.92797132649110969,0,NA
+N=256 repeat=2
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+serial,2,256,1,1,1,1000,benchmark,0.13751240200000001,0.13751240200000001,0,0,0.92800689019228577,0.465815508556575,0.92797132649110969,0,NA
+N=256 repeat=3
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+serial,2,256,1,1,1,1000,benchmark,0.13773332699999999,0.13773332699999999,0,0,0.92800689019228577,0.465815508556575,0.92797132649110969,0,NA
+N=512 repeat=1
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+serial,2,512,1,1,1,1000,benchmark,0.54883957000000005,0.54883957000000005,0,0,0.9814231427338489,0.49166996331940449,0.98141388314889677,0,NA
+N=512 repeat=2
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+serial,2,512,1,1,1,1000,benchmark,0.54922888700000005,0.54922888700000005,0,0,0.9814231427338489,0.49166996331940449,0.98141388314889677,0,NA
+N=512 repeat=3
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+serial,2,512,1,1,1,1000,benchmark,0.54888372100000005,0.54888372100000005,0,0,0.9814231427338489,0.49166996331940449,0.98141388314889677,0,NA
+N=1024 repeat=1
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+serial,2,1024,1,1,1,1000,benchmark,2.2324159730000002,2.2324159730000002,0,0,0.99531399063158643,0.49814298663930096,0.99531164946228823,0,NA
+N=1024 repeat=2
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+serial,2,1024,1,1,1,1000,benchmark,2.2365800760000001,2.2365800760000001,0,0,0.99531399063158643,0.49814298663930096,0.99531164946228823,0,NA
+N=1024 repeat=3
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+serial,2,1024,1,1,1,1000,benchmark,2.2279792180000002,2.2279792180000002,0,0,0.99531399063158643,0.49814298663930096,0.99531164946228823,0,NA
+N=2048 repeat=1
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+serial,2,2048,1,1,1,1000,benchmark,10.102668646,10.102668646,0,0,0.99882528965588147,0.49965649854330402,0.99882470241605004,0,NA
+N=2048 repeat=2
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+serial,2,2048,1,1,1,1000,benchmark,10.127096541,10.127096541,0,0,0.99882528965588147,0.49965649854330402,0.99882470241605004,0,NA
+N=2048 repeat=3
+version,dim,n,mpi_ranks,omp_threads,total_cores,iterations,mode,runtime_sec,compute_sec,halo_sec,reduction_sec,relative_residual,l2_rms_error,linf_error,boundary_max,converged
+serial,2,2048,1,1,1,1000,benchmark,10.249014979,10.249014979,0,0,0.99882528965588147,0.49965649854330402,0.99882470241605004,0,NA
+===== FINISHED =====
+Mon Nov  9 21:32:46 +08 2026
+      ======================================================================================
+     Resource Usage on 2026-11-09 21:32:46.186977:
+     JobId: 1038177.venus01  				 Project: _pbs_project_default 
+     Submission Host: atlas8-c01 
+     Exit Status: 0
+     NCPUs Requested: 12 				 NCPUs Used: 12
+     Memory Requested: 4gb 				 Memory Used: 0b 
+     Vmem Used: 394772kb
+     CPU Time Used: 00:00:00 
+     Walltime requested: 00:20:00 			 Walltime Used: 00:00:43
+     Submit Time:  Mon Nov  9 21:32:00 2026 		 Start Time: Mon Nov  9 21:32:03 2026 
+     End Time: Mon Nov  9 21:32:46 2026 
+     Execution Nodes Used: (cnode-33-43-28:ncpus=12:mem=4194304kb)
+     ======================================================================================

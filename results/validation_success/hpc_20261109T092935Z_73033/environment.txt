@@ -1,0 +1,20 @@
+Mon Nov  9 09:29:35 UTC 2026
+cnode-33-43-21
+Linux 3.10.0-1160.71.1.el7.x86_64 x86_64
+/app1/centos7/gnu/openmpi-4.1.2_install/bin/mpicxx
+g++ (GCC) 9.2.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+/app1/centos7/gnu/openmpi-4.1.2_install/bin/mpicxx
+g++ (GCC) 9.2.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Python 3.7.0
+MPIEXEC=mpirun
+MPI_NP_FLAG=-np
+Currently Loaded Modulefiles:
+ 1) gcc/7.3.0   2) openmpi/4.1.2   3) gcc/9.2.0   4) python3.7  
