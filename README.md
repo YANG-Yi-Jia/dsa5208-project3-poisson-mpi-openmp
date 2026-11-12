@@ -63,6 +63,8 @@ Create the output directory before running. Validation tests can regenerate CSV 
 | [1038015](results/hybrid_scaling/hybrid_1038015.csv) | `hybrid_scaling_12.pbs` | Six rank/thread mixes totaling twelve CPUs | `cnode-33-43-28` |
 | [1038027](results/strong_scaling/strong96_1038027.csv) | `strong_scaling_96.pbs` | Separate 24/48/96-rank check | `cnode-33-43-52` |
 
+Job **1040748** compares pure MPI and three hybrid configurations in a single 12-CPU allocation. See the [PBS script](matched_mpi_hybrid_12.pbs), [raw timings](results/matched_comparison/matched_1040748.csv), and [job log](results/logs/poisson_matched.o1040748).
+
 Each setting was repeated three times; the report uses medians. The **strong-scaling speedup and efficiency use only job 1038129**, with its own one-rank MPI baseline. Other jobs had different allocations, and at least two nodes were involved. Do not combine runtimes from these jobs to claim a controlled serial-to-MPI or MPI-to-hybrid speedup. In particular, the pure-MPI 12-rank median was **0.5005 s** in job 1038129 but **2.1012 s** in job 1038009. The latter ran on a different node with a 12-CPU rather than 96-CPU allocation.
 
 The original PBS output for these jobs is in [results/logs](results/logs). On Atlas8, build the executables before submitting the corresponding PBS script from the repository root. For example, run `qsub strong_scaling_final.pbs` to repeat the main MPI strong-scaling benchmark.
