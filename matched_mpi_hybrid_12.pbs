@@ -1,0 +1,89 @@
+#!/bin/bash
+#PBS -N poisson_matched
+#PBS -q parallel
+#PBS -l select=1:ncpus=12:mpiprocs=12:mem=4gb
+#PBS -l walltime=00:20:00
+#PBS -j oe
+
+set -e
+cd "$PBS_O_WORKDIR"
+
+module purge
+module load openmpi/4.1.2
+module load gcc/9.2.0
+
+export OMP_DYNAMIC=FALSE
+export OMP_PROC_BIND=close
+export OMP_PLACES=cores
+
+mkdir -p results/matched_comparison
+OUT="results/matched_comparison/matched_${PBS_JOBID%%.*}.csv"
+
+echo "===== MATCHED MPI-HYBRID COMPARISON ====="
+echo "Job: $PBS_JOBID"
+hostname
+date
+
+echo "===== ENVIRONMENT ====="
+module list
+lscpu | grep -E 'CPU\(s\):|Thread\(s\) per core:|Socket\(s\):'
+
+run_case() {
+    case "$1" in
+        mpi)
+            export OMP_NUM_THREADS=1
+            echo "Pure MPI: 12 ranks"
+            mpirun --bind-to core -np 12 ./poisson_mpi \
+                --dim 2 --n 2048 --mode benchmark \
+                --iterations 1000 --output "$OUT"
+            ;;
+        h12)
+            export OMP_NUM_THREADS=1
+            echo "Hybrid: 12 ranks x 1 thread"
+            mpirun --map-by slot:PE=1 --bind-to core \
+                -np 12 ./poisson_hybrid \
+                --dim 2 --n 2048 --mode benchmark \
+                --iterations 1000 --output "$OUT"
+            ;;
+        h34)
+            export OMP_NUM_THREADS=4
+            echo "Hybrid: 3 ranks x 4 threads"
+            mpirun --map-by slot:PE=4 --bind-to core \
+                -np 3 ./poisson_hybrid \
+                --dim 2 --n 2048 --mode benchmark \
+                --iterations 1000 --output "$OUT"
+            ;;
+        h112)
+            export OMP_NUM_THREADS=12
+            echo "Hybrid: 1 rank x 12 threads"
+            mpirun --map-by slot:PE=12 --bind-to core \
+                -np 1 ./poisson_hybrid \
+                --dim 2 --n 2048 --mode benchmark \
+                --iterations 1000 --output "$OUT"
+            ;;
+    esac
+}
+
+echo "===== ROUND 1 ====="
+run_case mpi
+run_case h12
+run_case h34
+run_case h112
+
+echo "===== ROUND 2 ====="
+run_case h34
+run_case h112
+run_case mpi
+run_case h12
+
+echo "===== ROUND 3 ====="
+run_case h112
+run_case h12
+run_case h34
+run_case mpi
+
+echo "===== RESULTS ====="
+cat "$OUT"
+
+echo "===== FINISHED ====="
+date
